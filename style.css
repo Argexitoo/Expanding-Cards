@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Truculenta';
+    background-color: beige;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
+
+.image {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    cursor: pointer;
+    border-radius: 50px;
+    flex: 0.5;
+    margin: 10px;
+    transition: flex 0.7s ease-in;
+}
+
+.image.active {
+    flex: 5;
+}
+
+.image.active h2 {
+    opacity: 1;
+}
+
+.image h2 {
+    top: 80%;
+    left: 10px;
+    position: relative;
+    margin: 0;
+    color: white;
+    opacity: 0;
+    font-size: 46px;
+}
+@media (max-width: 680px) {
+    .container {
+        width: 100vw;
+    }
+
+    .image:nth-of-type(4) {
+        display: none;
+    }
+}
